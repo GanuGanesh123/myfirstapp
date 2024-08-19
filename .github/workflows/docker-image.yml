@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ssgpdocker/myfirstapp:$(date +%s)
+      run: docker build -t myfirstapp:v1 .
+    - name: Deply docker image
+      run: docker push ssgpdocker/myfirstapp 
