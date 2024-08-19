@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build -t myfirstapp:v1 .
     - name: Tagging Docker Image
-      run: docker tag myfirstapp ssgpdocker/myfirstapp 
+      run: docker tag myfirstapp:v1 ssgpdocker/myfirstapp 
     - name: Deply docker image
       run: docker push ssgpdocker/myfirstapp 
